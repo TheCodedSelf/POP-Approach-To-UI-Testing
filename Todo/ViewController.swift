@@ -15,7 +15,9 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-        
+    
+    navigationItem.rightBarButtonItem?.accessibilityIdentifier = Accessibility.Root.AddButton
+    
     todos = [ToDoItem(id: "1", image: "child-selected", title: "Go to Gym", date: dateFromString("2018-10-20")!),
              ToDoItem(id: "2", image: "shopping-cart-selected", title: "Grocery Shopping", date: dateFromString("2018-10-28")!),
              ToDoItem(id: "3", image: "phone-selected", title: "Book Appointment", date: dateFromString("2018-10-30")!),
