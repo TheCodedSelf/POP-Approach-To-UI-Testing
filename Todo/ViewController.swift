@@ -15,9 +15,7 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    navigationItem.leftBarButtonItem = editButtonItem
-    
+        
     todos = [ToDoItem(id: "1", image: "child-selected", title: "Go to Gym", date: dateFromString("2018-10-20")!),
              ToDoItem(id: "2", image: "shopping-cart-selected", title: "Grocery Shopping", date: dateFromString("2018-10-28")!),
              ToDoItem(id: "3", image: "phone-selected", title: "Book Appointment", date: dateFromString("2018-10-30")!),
@@ -25,6 +23,8 @@ class ViewController: UIViewController {
   }
   
   override func viewWillAppear(_ animated: Bool) {
+    self.navigationController?.view.backgroundColor = .white
+    todos = todos.filter { !$0.markedForDeletion }
     super.viewWillAppear(animated)
     todoTableView.reloadData()
   }
@@ -51,12 +51,21 @@ class ViewController: UIViewController {
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "editTodo" {
-      let vc = segue.destination as! DetailViewController
-      let indexPath = todoTableView.indexPathForSelectedRow
-      if let indexPath = indexPath {
-        vc.todo = todos[(indexPath as NSIndexPath).row]
-      }
+    let indexPath = todoTableView.indexPathForSelectedRow
+    let todo: ToDoItem?
+    if let indexPath = indexPath {
+        todo = todos[(indexPath as NSIndexPath).row]
+    } else {
+        todo = nil
+    }
+    if segue.identifier == "viewTodo" {
+        guard let vc = segue.destination as? ViewTodoViewController else {
+            preconditionFailure("Wrong VC for segue")
+        }
+        guard let todo = todo else {
+            preconditionFailure("Should have a selected item")
+        }
+        vc.populate(with: todo)
     }
   }
 }
@@ -72,7 +81,7 @@ extension ViewController: UITableViewDataSource {
       setMessageLabel(messageLabel, frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height), text: "No data is currently available.", textColor: UIColor.black, numberOfLines: 0, textAlignment: NSTextAlignment.center, font: UIFont(name:"Palatino-Italic", size: 20)!)
       
       self.todoTableView.backgroundView = messageLabel
-      self.todoTableView.separatorStyle = UITableViewCellSeparatorStyle.none
+      self.todoTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
       
       return 0
     }
@@ -96,10 +105,10 @@ extension ViewController: UITableViewDelegate {
   }
   
   // Delete the cell
-  func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-    if editingStyle == UITableViewCellEditingStyle.delete {
+  func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    if editingStyle == UITableViewCell.EditingStyle.delete {
       todos.remove(at: (indexPath as NSIndexPath).row)
-      todoTableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+      todoTableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
     }
   }
   

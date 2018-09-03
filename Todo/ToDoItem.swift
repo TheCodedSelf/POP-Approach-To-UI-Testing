@@ -12,7 +12,8 @@ class ToDoItem: NSObject {
   var image: String
   var title: String
   var date: Date
-  
+  var markedForDeletion = false
+    
   init(id: String, image: String, title: String, date: Date) {
     self.id = id
     self.image = image

@@ -15,6 +15,7 @@
 		19515FA01C855C7300DC2284 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19515F9F1C855C7300DC2284 /* ToDoItem.swift */; };
 		19515FA21C855D9A00DC2284 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19515FA11C855D9A00DC2284 /* Utils.swift */; };
 		19A79A371C869E270087EEBA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A79A361C869E260087EEBA /* DetailViewController.swift */; };
+		9595FD10213D3E8B008ABCD8 /* ViewTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9595FD0F213D3E8B008ABCD8 /* ViewTodoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +28,8 @@
 		19515F991C8558F800DC2284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19515F9F1C855C7300DC2284 /* ToDoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		19515FA11C855D9A00DC2284 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		19A79A361C869E260087EEBA /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		19A79A361C869E260087EEBA /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
+		9595FD0F213D3E8B008ABCD8 /* ViewTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTodoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				19515F941C8558F800DC2284 /* Assets.xcassets */,
 				19515F961C8558F800DC2284 /* LaunchScreen.storyboard */,
 				19515F991C8558F800DC2284 /* Info.plist */,
+				9595FD0F213D3E8B008ABCD8 /* ViewTodoViewController.swift */,
 			);
 			path = Todo;
 			sourceTree = "<group>";
@@ -106,7 +109,7 @@
 					19515F891C8558F800DC2284 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 44JDRP3T56;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19515F901C8558F800DC2284 /* ViewController.swift in Sources */,
+				9595FD10213D3E8B008ABCD8 /* ViewTodoViewController.swift in Sources */,
 				19515F8E1C8558F800DC2284 /* AppDelegate.swift in Sources */,
 				19A79A371C869E270087EEBA /* DetailViewController.swift in Sources */,
 				19515FA01C855C7300DC2284 /* ToDoItem.swift in Sources */,
@@ -289,8 +293,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yigu.Todo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -303,8 +306,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yigu.Todo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

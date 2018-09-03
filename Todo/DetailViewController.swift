@@ -13,9 +13,11 @@ class DetailViewController: UIViewController {
   @IBOutlet weak var phoneButton: UIButton!
   @IBOutlet weak var shoppingCartButton: UIButton!
   @IBOutlet weak var travelButton: UIButton!
-  @IBOutlet weak var todoTitleLabel: UITextField!
+  @IBOutlet weak var todoTitleLabel: UILabel!
+  @IBOutlet weak var todoTitleTextField: UITextField!
   @IBOutlet weak var todoDatePicker: UIDatePicker!
-  
+  @IBOutlet weak var doneButton: UIButton!
+    
   var todo: ToDoItem?
   
   override func viewDidLoad() {
@@ -36,7 +38,7 @@ class DetailViewController: UIViewController {
         travelButton.isSelected = true
       }
       
-      todoTitleLabel.text = todo.title
+      todoTitleTextField.text = todo.title
       todoDatePicker.setDate(todo.date, animated: false)
     } else {
       title = "New Todo"
@@ -90,11 +92,11 @@ class DetailViewController: UIViewController {
     
     if let todo = todo {
       todo.image = image
-      todo.title = todoTitleLabel.text!
+      todo.title = todoTitleTextField.text!
       todo.date = todoDatePicker.date
     } else {
       let uuid = UUID().uuidString
-      todo = ToDoItem(id: uuid, image: image, title: todoTitleLabel.text!, date: todoDatePicker.date)
+      todo = ToDoItem(id: uuid, image: image, title: todoTitleTextField.text!, date: todoDatePicker.date)
       todos.append(todo!)
     }
     
