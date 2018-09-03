@@ -10,9 +10,8 @@ import XCTest
 
 class RootViewUITests: UITestCase, RootViewStarting {
 
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testNavigatesToAddScreen() {
+        XCUIApplication().navigationBars.buttons[Accessibility.Root.AddButton].tap()
     }
     
 }
