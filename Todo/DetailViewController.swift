@@ -43,6 +43,7 @@ class DetailViewController: UIViewController {
     } else {
       title = "New Todo"
       childButton.isSelected = true
+      doneButton.accessibilityIdentifier = Accessibility.Add.Done
     }
   }
   

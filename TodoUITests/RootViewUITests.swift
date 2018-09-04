@@ -8,10 +8,11 @@
 
 import XCTest
 
-class RootViewUITests: UITestCase, RootViewStarting {
+class RootViewUITests: UITestCase, RootViewStarting, AddScreenVerifying {
 
     func testNavigatesToAddScreen() {
         XCUIApplication().navigationBars.buttons[Accessibility.Root.AddButton].tap()
+        XCTAssertTrue(addScreenIsShowing())
     }
     
 }

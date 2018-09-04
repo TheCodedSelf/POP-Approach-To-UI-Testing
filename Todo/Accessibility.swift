@@ -12,4 +12,8 @@ enum Accessibility {
     enum Root {
         static let AddButton = "Add Todo"
     }
+    
+    enum Add {
+        static let Done = "Done"
+    }
 }
