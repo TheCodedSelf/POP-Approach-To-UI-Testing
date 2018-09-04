@@ -21,6 +21,7 @@
 		95746A9A213D6F3A00F13BA3 /* UITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95746A99213D6F3A00F13BA3 /* UITestCase.swift */; };
 		95746A9C213D72BD00F13BA3 /* Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95746A9B213D72BD00F13BA3 /* Accessibility.swift */; };
 		95746A9D213D72EC00F13BA3 /* Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95746A9B213D72BD00F13BA3 /* Accessibility.swift */; };
+		95873767213E492E006E3128 /* AddScreenVerifying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95873766213E492E006E3128 /* AddScreenVerifying.swift */; };
 		9595FD062137B4D1008ABCD8 /* RootViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9595FD052137B4D1008ABCD8 /* RootViewUITests.swift */; };
 		9595FD10213D3E8B008ABCD8 /* ViewTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9595FD0F213D3E8B008ABCD8 /* ViewTodoViewController.swift */; };
 /* End PBXBuildFile section */
@@ -45,15 +46,16 @@
 		19515F991C8558F800DC2284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19515F9F1C855C7300DC2284 /* ToDoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		19515FA11C855D9A00DC2284 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		19A79A361C869E260087EEBA /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
 		95746A92213D6DB500F13BA3 /* AppStarting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStarting.swift; sourceTree = "<group>"; };
 		95746A95213D6E3B00F13BA3 /* RootViewStarting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewStarting.swift; sourceTree = "<group>"; };
 		95746A97213D6EA600F13BA3 /* StartupConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupConfigurable.swift; sourceTree = "<group>"; };
 		95746A99213D6F3A00F13BA3 /* UITestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestCase.swift; sourceTree = "<group>"; };
 		95746A9B213D72BD00F13BA3 /* Accessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessibility.swift; sourceTree = "<group>"; };
+		95873766213E492E006E3128 /* AddScreenVerifying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScreenVerifying.swift; sourceTree = "<group>"; };
 		9595FD032137B4D1008ABCD8 /* TodoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9595FD052137B4D1008ABCD8 /* RootViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewUITests.swift; sourceTree = "<group>"; };
 		9595FD072137B4D1008ABCD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		19A79A361C869E260087EEBA /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
 		9595FD0F213D3E8B008ABCD8 /* ViewTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTodoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,9 +123,18 @@
 			path = Starting;
 			sourceTree = "<group>";
 		};
+		95873765213E491D006E3128 /* Verifying */ = {
+			isa = PBXGroup;
+			children = (
+				95873766213E492E006E3128 /* AddScreenVerifying.swift */,
+			);
+			path = Verifying;
+			sourceTree = "<group>";
+		};
 		9595FD042137B4D1008ABCD8 /* TodoUITests */ = {
 			isa = PBXGroup;
 			children = (
+				95873765213E491D006E3128 /* Verifying */,
 				95746A94213D6E2500F13BA3 /* Starting */,
 				9595FD052137B4D1008ABCD8 /* RootViewUITests.swift */,
 				9595FD072137B4D1008ABCD8 /* Info.plist */,
@@ -254,6 +265,7 @@
 				9595FD062137B4D1008ABCD8 /* RootViewUITests.swift in Sources */,
 				95746A93213D6DB500F13BA3 /* AppStarting.swift in Sources */,
 				95746A9A213D6F3A00F13BA3 /* UITestCase.swift in Sources */,
+				95873767213E492E006E3128 /* AddScreenVerifying.swift in Sources */,
 				95746A9D213D72EC00F13BA3 /* Accessibility.swift in Sources */,
 				95746A96213D6E3B00F13BA3 /* RootViewStarting.swift in Sources */,
 			);
