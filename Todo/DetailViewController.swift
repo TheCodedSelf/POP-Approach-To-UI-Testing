@@ -44,6 +44,7 @@ class DetailViewController: UIViewController {
       title = "New Todo"
       childButton.isSelected = true
       doneButton.accessibilityIdentifier = Accessibility.Add.Done
+      todoTitleTextField.accessibilityIdentifier = Accessibility.Add.Title
     }
   }
   

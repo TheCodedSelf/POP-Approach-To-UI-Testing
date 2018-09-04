@@ -10,13 +10,28 @@ import XCTest
 
 protocol AddScreenVerifying {
     func addScreenIsShowing() -> Bool
+    var addDoneButton: XCUIElement { get }
+    var addTitleTextField: XCUIElement { get }
+    var addTitleLabel: XCUIElement { get }
 }
 
 extension AddScreenVerifying {
     func addScreenIsShowing() -> Bool {
         let app = XCUIApplication()
         return app.navigationBars["New Todo"].exists
-         && app.staticTexts["Todo Title:"].exists
-         && app.buttons[Accessibility.Add.Done].exists
+         && addTitleLabel.exists
+         && addDoneButton.exists
+    }
+    
+    var addDoneButton: XCUIElement {
+        return XCUIApplication().buttons[Accessibility.Add.Done]
+    }
+    
+    var addTitleTextField: XCUIElement {
+        return XCUIApplication().textFields[Accessibility.Add.Title]
+    }
+    
+    var addTitleLabel: XCUIElement {
+        return XCUIApplication().staticTexts["Todo Title:"]
     }
 }

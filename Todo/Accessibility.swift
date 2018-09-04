@@ -15,5 +15,6 @@ enum Accessibility {
     
     enum Add {
         static let Done = "Done"
+        static let Title = "Title"
     }
 }
