@@ -23,6 +23,8 @@
 		95746A9D213D72EC00F13BA3 /* Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95746A9B213D72BD00F13BA3 /* Accessibility.swift */; };
 		95873767213E492E006E3128 /* AddScreenVerifying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95873766213E492E006E3128 /* AddScreenVerifying.swift */; };
 		9587376A213E51BE006E3128 /* StandardElementsInteracting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95873769213E51BE006E3128 /* StandardElementsInteracting.swift */; };
+		9587376C213E52E6006E3128 /* AddScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9587376B213E52E6006E3128 /* AddScreenTests.swift */; };
+		9587376E213E530D006E3128 /* AddScreenStarting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9587376D213E530D006E3128 /* AddScreenStarting.swift */; };
 		9595FD062137B4D1008ABCD8 /* RootViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9595FD052137B4D1008ABCD8 /* RootViewUITests.swift */; };
 		9595FD10213D3E8B008ABCD8 /* ViewTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9595FD0F213D3E8B008ABCD8 /* ViewTodoViewController.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +57,8 @@
 		95746A9B213D72BD00F13BA3 /* Accessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessibility.swift; sourceTree = "<group>"; };
 		95873766213E492E006E3128 /* AddScreenVerifying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScreenVerifying.swift; sourceTree = "<group>"; };
 		95873769213E51BE006E3128 /* StandardElementsInteracting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardElementsInteracting.swift; sourceTree = "<group>"; };
+		9587376B213E52E6006E3128 /* AddScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScreenTests.swift; sourceTree = "<group>"; };
+		9587376D213E530D006E3128 /* AddScreenStarting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScreenStarting.swift; sourceTree = "<group>"; };
 		9595FD032137B4D1008ABCD8 /* TodoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9595FD052137B4D1008ABCD8 /* RootViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewUITests.swift; sourceTree = "<group>"; };
 		9595FD072137B4D1008ABCD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 				95746A92213D6DB500F13BA3 /* AppStarting.swift */,
 				95746A95213D6E3B00F13BA3 /* RootViewStarting.swift */,
 				95746A97213D6EA600F13BA3 /* StartupConfigurable.swift */,
+				9587376D213E530D006E3128 /* AddScreenStarting.swift */,
 			);
 			path = Starting;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 				9595FD052137B4D1008ABCD8 /* RootViewUITests.swift */,
 				9595FD072137B4D1008ABCD8 /* Info.plist */,
 				95746A99213D6F3A00F13BA3 /* UITestCase.swift */,
+				9587376B213E52E6006E3128 /* AddScreenTests.swift */,
 			);
 			path = TodoUITests;
 			sourceTree = "<group>";
@@ -275,10 +281,12 @@
 				95746A98213D6EA600F13BA3 /* StartupConfigurable.swift in Sources */,
 				9595FD062137B4D1008ABCD8 /* RootViewUITests.swift in Sources */,
 				95746A93213D6DB500F13BA3 /* AppStarting.swift in Sources */,
+				9587376E213E530D006E3128 /* AddScreenStarting.swift in Sources */,
 				95746A9A213D6F3A00F13BA3 /* UITestCase.swift in Sources */,
 				95873767213E492E006E3128 /* AddScreenVerifying.swift in Sources */,
 				95746A9D213D72EC00F13BA3 /* Accessibility.swift in Sources */,
 				9587376A213E51BE006E3128 /* StandardElementsInteracting.swift in Sources */,
+				9587376C213E52E6006E3128 /* AddScreenTests.swift in Sources */,
 				95746A96213D6E3B00F13BA3 /* RootViewStarting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
