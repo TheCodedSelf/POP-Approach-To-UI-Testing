@@ -26,4 +26,25 @@ class ViewTodoTests: UITestCase, ViewScreenStarting, ViewTodoScreenVerifying {
         XCTAssertFalse(todo(titled: titleOfTodoForTest).waitForExistence(timeout: 1))
     }
     
+    func testCanNavigateToEditScreen() {
+        let app = XCUIApplication()
+        
+        // Find button with Edit button's identifier
+        let edit = app.buttons[Accessibility.View.EditButton]
+        
+        edit.tap()
+        
+        // Find various fields on edit screen
+        let titleLabel = app.staticTexts["Todo Title:"]
+        let titleTextField = app.textFields[Accessibility.Edit.TitleField]
+        let doneButton = app.buttons[Accessibility.Edit.DoneButton]
+        let headerLabel = app.navigationBars["Edit Todo"]
+        
+        // Are all of these fields showing?
+        let editScreenIsShowing = titleLabel.exists && titleTextField.exists
+            && doneButton.exists && headerLabel.exists
+        
+        // Assert that the edit screen is showing
+        XCTAssertTrue(editScreenIsShowing)
+    }
 }

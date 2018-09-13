@@ -38,6 +38,9 @@ class DetailViewController: UIViewController {
         travelButton.isSelected = true
       }
       
+      doneButton.accessibilityIdentifier = Accessibility.Edit.DoneButton
+      todoTitleTextField.accessibilityIdentifier = Accessibility.Edit.TitleField
+      todoTitleLabel.accessibilityIdentifier = Accessibility.Edit.TitleLabel
       todoTitleTextField.text = todo.title
       todoDatePicker.setDate(todo.date, animated: false)
     } else {

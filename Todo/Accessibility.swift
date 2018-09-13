@@ -20,5 +20,12 @@ enum Accessibility {
     
     enum View {
         static let DeleteButton = "Delete Todo"
+        static let EditButton = "Edit Todo"
+    }
+    
+    enum Edit {
+        static let DoneButton = "Done Editing"
+        static let TitleField = "Edit Todo Title"
+        static let TitleLabel = "Edit Todo Title Label"
     }
 }
