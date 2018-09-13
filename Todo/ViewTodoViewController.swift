@@ -38,6 +38,11 @@ class ViewTodoViewController: UIViewController {
         state = .loaded(todo)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        deleteButton.accessibilityIdentifier = Accessibility.View.DeleteButton
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "editTodo" {
             guard case let .loaded(todo) = state else { return }

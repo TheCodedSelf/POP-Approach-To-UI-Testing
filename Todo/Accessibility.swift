@@ -17,4 +17,8 @@ enum Accessibility {
         static let Done = "Done"
         static let Title = "Title"
     }
+    
+    enum View {
+        static let DeleteButton = "Delete Todo"
+    }
 }
