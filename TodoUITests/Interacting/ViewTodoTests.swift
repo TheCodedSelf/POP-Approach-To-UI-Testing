@@ -19,4 +19,7 @@ class ViewTodoTests: UITestCase, ViewScreenStarting, ViewTodoScreenVerifying {
         XCTAssertFalse(todo(titled: titleOfTodoForTest).waitForExistence(timeout: 1))
     }
     
+    func testCanShareTodo() {
+        XCTAssert(false)
+    }
 }

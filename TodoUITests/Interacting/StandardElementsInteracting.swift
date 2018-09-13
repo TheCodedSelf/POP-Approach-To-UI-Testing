@@ -22,4 +22,17 @@ extension StandardElementsInteracting {
         datePickers.pickerWheels.element(boundBy: 2)
             .adjust(toPickerWheelValue: year)
     }
+    
+    func shareSheetShows(afterDelay seconds: TimeInterval) -> Bool {
+        let app = XCUIApplication()
+        let copyButton = app.buttons["Copy"]
+        let cancelButton = app.buttons["Cancel"]
+        
+        let buttonsExist = copyButton.waitForExistence(timeout: seconds) &&
+            cancelButton.waitForExistence(timeout: seconds)
+        let buttonsAreHittable = copyButton.isHittable &&
+            cancelButton.isHittable
+        
+        return buttonsExist && buttonsAreHittable
+    }
 }
