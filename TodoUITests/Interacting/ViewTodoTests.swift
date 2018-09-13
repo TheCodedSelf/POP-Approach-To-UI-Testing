@@ -8,12 +8,15 @@
 
 import XCTest
 
-class ViewTodoTests: UITestCase, ViewScreenStarting {
+class ViewTodoTests: UITestCase, ViewScreenStarting, ViewTodoScreenVerifying {
     
     let titleOfTodoForTest = "Go to Gym"
     
     func testCanDeleteTodo() {
-        XCTAssert(false)
+        let delete = XCUIApplication().buttons[Accessibility.View.DeleteButton]
+        delete.tap()
+        XCTAssertFalse(viewTodoScreenIsShowing(forTodoTitled: titleOfTodoForTest))
+        XCTAssertFalse(todo(titled: titleOfTodoForTest).waitForExistence(timeout: 1))
     }
     
 }
