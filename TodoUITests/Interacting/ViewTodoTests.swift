@@ -24,4 +24,18 @@ class ViewTodoTests: UITestCase, ViewScreenStarting, ViewTodoScreenVerifying, St
         share.tap()
         XCTAssertTrue(shareSheetShows(afterDelay: 3))
     }
+    
+    func testCanNavigateToEditScreen() {
+        let app = XCUIApplication()
+        let edit = app.buttons[Accessibility.View.EditButton]
+        edit.tap()
+        
+        let titleLabel = app.staticTexts["Todo Title:"]
+        let titleTextField = app.textFields[Accessibility.Edit.TitleField]
+        let doneButton = app.buttons[Accessibility.Edit.DoneButton]
+        let headerLabel = app.navigationBars["Edit Todo"]
+        let editScreenIsShowing = titleLabel.exists && titleTextField.exists
+            && doneButton.exists && headerLabel.exists
+        XCTAssertTrue(editScreenIsShowing)
+    }
 }
