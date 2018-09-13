@@ -20,5 +20,6 @@ enum Accessibility {
     
     enum View {
         static let DeleteButton = "Delete Todo"
+        static let ShareButton = "Share Todo"
     }
 }

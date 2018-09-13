@@ -8,7 +8,7 @@
 
 import XCTest
 
-class ViewTodoTests: UITestCase, ViewScreenStarting, ViewTodoScreenVerifying {
+class ViewTodoTests: UITestCase, ViewScreenStarting, ViewTodoScreenVerifying, StandardElementsInteracting {
     
     let titleOfTodoForTest = "Go to Gym"
     
@@ -20,6 +20,8 @@ class ViewTodoTests: UITestCase, ViewScreenStarting, ViewTodoScreenVerifying {
     }
     
     func testCanShareTodo() {
-        XCTAssert(false)
+        let share = XCUIApplication().buttons[Accessibility.View.ShareButton]
+        share.tap()
+        XCTAssertTrue(shareSheetShows(afterDelay: 3))
     }
 }

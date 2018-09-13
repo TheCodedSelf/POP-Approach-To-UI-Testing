@@ -41,6 +41,7 @@ class ViewTodoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         deleteButton.accessibilityIdentifier = Accessibility.View.DeleteButton
+        shareButton.accessibilityIdentifier = Accessibility.View.ShareButton
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
