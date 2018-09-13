@@ -8,22 +8,19 @@
 
 import XCTest
 
-class AddScreenTests: UITestCase, AddScreenStarting, AddScreenVerifying, StandardElementsInteracting {
+class AddScreenTests: UITestCase, AddScreenStarting, AddScreenVerifying, StandardElementsInteracting, TodoListInteracting {
         
     func testCanMakeNewTodo() {
         let todoTitle = "Buy Christmas Presents"
         
-        let app = XCUIApplication()
         addTitleTextField.tap()
         addTitleTextField.typeText(todoTitle)
         
         adjustDatePicker(year: "2018", month: "December", day: "24")
         
-        app.staticTexts["Todo Title:"].tap()
+        addTitleLabel.tap()
         addDoneButton.tap()
-        let newTodoElement = app.cells
-            .containing(.staticText, identifier: todoTitle)
-            .firstMatch
+        let newTodoElement = todo(titled: todoTitle)
         
         XCTAssertTrue(newTodoElement.exists)
         XCTAssert(newTodoElement.staticTexts["2018-12-24"].exists)

@@ -8,11 +8,17 @@
 
 import XCTest
 
-class RootViewUITests: UITestCase, RootViewStarting, AddScreenVerifying {
+class RootViewUITests: UITestCase, RootViewStarting, AddScreenVerifying, TodoListInteracting, ViewTodoScreenVerifying {
 
     func testNavigatesToAddScreen() {
         XCUIApplication().navigationBars.buttons[Accessibility.Root.AddButton].tap()
         XCTAssertTrue(addScreenIsShowing())
+    }
+    
+    func testNavigatesToViewTodoScreen() {
+        let todoTitle = "Go to Gym"
+        todo(titled: todoTitle).tap()
+        XCTAssertTrue(viewTodoScreenIsShowing(forTodoTitled: todoTitle))
     }
     
 }
