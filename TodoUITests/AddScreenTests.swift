@@ -8,12 +8,11 @@
 
 import XCTest
 
-class AddScreenTests: UITestCase, AddScreenStarting, AddScreenVerifying, StandardElementsInteracting {
+class AddScreenTests: UITestCase, AddScreenStarting, AddScreenVerifying, StandardElementsInteracting, TodoListInteracting {
     
     func testCanMakeNewTodo() {
         let todoTitle = "Buy Christmas Presents"
         
-        let app = XCUIApplication()
         
         // AddScreenVerifying contains different elements of add screen
         // Type the new title in the title text field
@@ -31,9 +30,7 @@ class AddScreenTests: UITestCase, AddScreenStarting, AddScreenVerifying, Standar
         addDoneButton.tap()
         
         // Find the todo in the root view
-        let newTodoElement = app.cells
-            .containing(.staticText, identifier: todoTitle)
-            .firstMatch
+        let newTodoElement = todo(titled: todoTitle)
         
         // Does the new todo exist?
         XCTAssertTrue(newTodoElement.exists)
