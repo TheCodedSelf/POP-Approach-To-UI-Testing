@@ -15,6 +15,8 @@
 		19515FA01C855C7300DC2284 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19515F9F1C855C7300DC2284 /* ToDoItem.swift */; };
 		19515FA21C855D9A00DC2284 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19515FA11C855D9A00DC2284 /* Utils.swift */; };
 		19A79A371C869E270087EEBA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A79A361C869E260087EEBA /* DetailViewController.swift */; };
+		95301411215210F400B7545D /* EditScreenStarting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95301410215210F400B7545D /* EditScreenStarting.swift */; };
+		953014132152139900B7545D /* EditScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953014122152139900B7545D /* EditScreenTests.swift */; };
 		955C17C92140EF3400541E1A /* TodoListInteracting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955C17C82140EF3400541E1A /* TodoListInteracting.swift */; };
 		955C17CB2140F00900541E1A /* ViewTodoScreenVerifying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955C17CA2140F00900541E1A /* ViewTodoScreenVerifying.swift */; };
 		955C17CD214A29EE00541E1A /* ViewTodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955C17CC214A29EE00541E1A /* ViewTodoTests.swift */; };
@@ -54,6 +56,8 @@
 		19515F9F1C855C7300DC2284 /* ToDoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		19515FA11C855D9A00DC2284 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		19A79A361C869E260087EEBA /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
+		95301410215210F400B7545D /* EditScreenStarting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScreenStarting.swift; sourceTree = "<group>"; };
+		953014122152139900B7545D /* EditScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScreenTests.swift; sourceTree = "<group>"; };
 		955C17C82140EF3400541E1A /* TodoListInteracting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListInteracting.swift; sourceTree = "<group>"; };
 		955C17CA2140F00900541E1A /* ViewTodoScreenVerifying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTodoScreenVerifying.swift; sourceTree = "<group>"; };
 		955C17CC214A29EE00541E1A /* ViewTodoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTodoTests.swift; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 				95746A97213D6EA600F13BA3 /* StartupConfigurable.swift */,
 				9587376D213E530D006E3128 /* AddScreenStarting.swift */,
 				955C17CE214A2A3700541E1A /* ViewScreenStarting.swift */,
+				95301410215210F400B7545D /* EditScreenStarting.swift */,
 			);
 			path = Starting;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 				9595FD072137B4D1008ABCD8 /* Info.plist */,
 				95746A99213D6F3A00F13BA3 /* UITestCase.swift */,
 				9587376B213E52E6006E3128 /* AddScreenTests.swift */,
+				953014122152139900B7545D /* EditScreenTests.swift */,
 			);
 			path = TodoUITests;
 			sourceTree = "<group>";
@@ -299,11 +305,13 @@
 				95746A9A213D6F3A00F13BA3 /* UITestCase.swift in Sources */,
 				95873767213E492E006E3128 /* AddScreenVerifying.swift in Sources */,
 				955C17CF214A2A3700541E1A /* ViewScreenStarting.swift in Sources */,
+				953014132152139900B7545D /* EditScreenTests.swift in Sources */,
 				95746A9D213D72EC00F13BA3 /* Accessibility.swift in Sources */,
 				955C17C92140EF3400541E1A /* TodoListInteracting.swift in Sources */,
 				9587376A213E51BE006E3128 /* StandardElementsInteracting.swift in Sources */,
 				9587376C213E52E6006E3128 /* AddScreenTests.swift in Sources */,
 				95746A96213D6E3B00F13BA3 /* RootViewStarting.swift in Sources */,
+				95301411215210F400B7545D /* EditScreenStarting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
